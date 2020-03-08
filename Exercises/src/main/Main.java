@@ -5,13 +5,17 @@
  */
 package main;
 
+import java.lang.Math;
+
 /**
  *
  * @author MaNa
  */
 public class Main {
     public static void main(String args[]){
-        System.out.println("Name: Manawadu M.S");
-        System.out.println("CID: DCSD143079");
+       double y;
+       double x = 13;
+       y = Math.sqrt(x);
+       System.out.println("Square root is " + y);
     }
 }
