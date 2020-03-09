@@ -6,7 +6,7 @@
 package main;
 
 
-
+import java.util.Scanner;
 /**
  *
  * @author MaNa
@@ -14,11 +14,18 @@ package main;
 public class Main {
     public static void main(String args[]){
        
-       int a = 3;
-       int b = 5;
+       Scanner x = new Scanner(System.in);
+       System.out.print("Enter employee type ");
+       int empType = x.nextInt();
        
-       // ternary operator / conditional operator
-       int x = (a < b) ? 10:20;
-       System.out.println(x);
+       System.out.print("Enter number of OT hours ");
+       double OTHours = x.nextDouble();
+       
+       if(empType == 1){
+           System.out.println( 15000 + 250*OTHours);
+       }
+       else{
+           System.out.println( 10000 + 100*OTHours);
+       }
     }
 }
