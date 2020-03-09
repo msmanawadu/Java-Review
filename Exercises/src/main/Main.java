@@ -5,7 +5,7 @@
  */
 package main;
 
-import java.lang.Math;
+import java.util.Scanner;
 
 /**
  *
@@ -13,9 +13,19 @@ import java.lang.Math;
  */
 public class Main {
     public static void main(String args[]){
-       double y;
-       double x = 13;
-       y = Math.sqrt(x);
-       System.out.println("Square root is " + y);
+       
+       Scanner x = new Scanner(System.in);
+       System.out.println("Enter Customer Name ");
+       String cName = x.nextLine();
+       
+       System.out.println("Enter Customer Number ");
+       int cNumber = x.nextInt();
+       
+       System.out.println("Enter number of points ");
+       double points = x.nextDouble();
+       
+       System.out.println("Customer Name: " + cName);
+       System.out.println("Customer Number: " + cNumber);
+       System.out.println("Number of Points: " + points);
     }
 }
