@@ -14,8 +14,11 @@ package main;
 public class Main {
     public static void main(String args[]){
        
-        double x = 100.54;
-        int y = (int)x;
-        System.out.println("Type casted value " + y);
+       int a = 3;
+       int b = 5;
+       
+       // ternary operator / conditional operator
+       int x = (a < b) ? 10:20;
+       System.out.println(x);
     }
 }
