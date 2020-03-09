@@ -5,7 +5,7 @@
  */
 package main;
 
-import java.util.Scanner;
+
 
 /**
  *
@@ -14,18 +14,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String args[]){
        
-       Scanner x = new Scanner(System.in);
-       System.out.println("Enter Customer Name ");
-       String cName = x.nextLine();
-       
-       System.out.println("Enter Customer Number ");
-       int cNumber = x.nextInt();
-       
-       System.out.println("Enter number of points ");
-       double points = x.nextDouble();
-       
-       System.out.println("Customer Name: " + cName);
-       System.out.println("Customer Number: " + cNumber);
-       System.out.println("Number of Points: " + points);
+        double x = 100.54;
+        int y = (int)x;
+        System.out.println("Type casted value " + y);
     }
 }
