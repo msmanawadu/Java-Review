@@ -13,19 +13,18 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String args[]){
+       Scanner input = new Scanner(System.in);
+       int counter = 0, index = 0, marks = 0, total = 0;
        
-       Scanner x = new Scanner(System.in);
-       System.out.print("Enter employee type ");
-       int empType = x.nextInt();
-       
-       System.out.print("Enter number of OT hours ");
-       double OTHours = x.nextDouble();
-       
-       if(empType == 1){
-           System.out.println( 15000 + 250*OTHours);
+       while(counter < 10){
+           System.out.println("Enter index");
+           index = input.nextInt();
+           System.out.println("Enter marks");
+           marks = input.nextInt();
+           total = total + marks;
+           counter++;
        }
-       else{
-           System.out.println( 10000 + 100*OTHours);
-       }
+       double avg = total/10;
+       System.out.println("Average marks " + avg);
     }
-}
+       }
