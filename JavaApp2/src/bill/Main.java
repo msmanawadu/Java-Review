@@ -13,7 +13,9 @@ public class Main {
     public static void main(String args []) {
     
         Bill b1 = new Bill();
-        b1.setData(790, 50.40, 2);
-        b1.calculateAndDisplay();
+        b1.setData(790, 25.40, 2);
+        double ans = b1.calculateArea();
+        b1.display(ans);
+        
     }
 }

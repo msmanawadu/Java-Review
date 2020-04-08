@@ -21,8 +21,13 @@ public class Bill {
         qty = z; 
     }
     
-    void calculateAndDisplay(){
+    double calculateArea(){
     double total = unitPrice * qty;
-    System.out.println("Total Amount = " + total);
+    return total;
     }
+    
+    void display(double a){
+    System.out.println("Total is = " + a);
+    }
+        
 }
