@@ -21,7 +21,7 @@ public class Bill {
         qty = z; 
     }
     
-    double calculateArea(){
+    double calculateTotal(){
     double total = unitPrice * qty;
     return total;
     }
