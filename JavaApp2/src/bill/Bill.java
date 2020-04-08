@@ -15,13 +15,22 @@ public class Bill {
     double unitPrice;
     int qty;
     
-    void setData(int x, double y, int z){
-        billNumber = x;
-        unitPrice = y;
-        qty = z; 
+    //default constructor method
+    Bill(){
+        billNumber = 1000;
+        unitPrice = 250.4;
+        qty = 2;
     }
     
-    double calculateTotal(){
+    //parameterized constructor method
+    Bill(int x, double y, int z){
+        billNumber = x;
+        unitPrice = y;
+        qty = z;
+    }
+    
+    
+    double calculateTotal (){
     double total = unitPrice * qty;
     return total;
     }

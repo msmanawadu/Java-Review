@@ -25,9 +25,11 @@ public class Main {
         int v3 = input.nextInt();
         
         Bill b1 = new Bill();
-        b1.setData(v1, v2, v3);
-        double ans = b1.calculateTotal();
-        b1.display(ans);
+        double ans1 = b1.calculateTotal();
+        b1.display(ans1);
         
+        Bill b2 = new Bill(v1, v2, v3);
+        double ans2 = b2.calculateTotal();
+        b2.display(ans2);
     }
 }
