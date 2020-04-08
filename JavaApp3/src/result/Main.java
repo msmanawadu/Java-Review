@@ -5,19 +5,40 @@
  */
 package result;
 
+import java.util.Scanner;
 /**
  *
  * @author MaNa
  */
 public class Main {
-    public static void main(String args []){
         
+    static int v1,v2,v3;
+    static Scanner input;  
+        
+    public static void main(String args []) {
+        
+        functionWrap();
         Result r1 = new Result();
-        int v1 = r1.multiply(2, 2);
-        r1.display(v1);
+        int result1 = r1.multiply(v1, v2);
+        r1.display(result1);
         
-        int v2 = r1.multiply(3, 3, 3);
-        r1.display(v2);
+        functionWrap();
+        System.out.println("Enter 3rd value ");
+        v3 = input.nextInt();
+        
+       
+        int result2 = r1.multiply(v1, v2, v3);
+        r1.display(result2);
         
     }
+    
+    static void functionWrap() {
+        
+        input = new Scanner(System.in);
+        System.out.println("Enter 1st value ");
+        v1 = input.nextInt();
+        
+        System.out.println("Enter 2nd value ");
+        v2 = input.nextInt();
+                            }
 }

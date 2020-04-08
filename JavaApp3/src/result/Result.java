@@ -9,8 +9,11 @@ package result;
  *
  * @author MaNa
  */
+
+
+
 public class Result {
-    
+
     int multiply(int x, int y, int z){
         int result = x * y * z;
         return result;
@@ -24,4 +27,5 @@ public class Result {
     void display(int ans){
         System.out.println("Multiplication = " + ans);
     }
+    
 }
