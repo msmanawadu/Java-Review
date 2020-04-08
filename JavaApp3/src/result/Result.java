@@ -11,13 +11,17 @@ package result;
  */
 public class Result {
     
-    void multiply(int x, int y, int z){
+    int multiply(int x, int y, int z){
         int result = x * y * z;
-        System.out.println("Multiplication of 3 numbers = " + result);
+        return result;
     }
     
-    void multiply(int x, int y){
+    int multiply(int x, int y){
         int result = x * y;
-        System.out.println("Multiplication of 2 numbers = " + result);
+        return result;
+    }
+    
+    void display(int ans){
+        System.out.println("Multiplication = " + ans);
     }
 }

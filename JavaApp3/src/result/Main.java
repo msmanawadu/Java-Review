@@ -11,8 +11,13 @@ package result;
  */
 public class Main {
     public static void main(String args []){
+        
         Result r1 = new Result();
-        r1.multiply(2, 2);
-        r1.multiply(3, 3, 3);
+        int v1 = r1.multiply(2, 2);
+        r1.display(v1);
+        
+        int v2 = r1.multiply(3, 3, 3);
+        r1.display(v2);
+        
     }
 }
