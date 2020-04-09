@@ -20,12 +20,16 @@ public class Bill {
         unitPrice = y;
         qty = z;
         
-        calculateAndDisplayBill();
+        calculateBill();
     }
     
-    void calculateAndDisplayBill(){
+    void calculateBill(){
         double total = unitPrice * qty;
-        System.out.println("Total Bill Amount = " + total);    
+        displayBill(total);  
     }
- 
+    
+    void displayBill(double billTotal){
+    System.out.println("Total Bill Amount = " + billTotal); 
+    }
+
 }

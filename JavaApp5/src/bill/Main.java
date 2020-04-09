@@ -13,7 +13,7 @@ public class Main {
     public static void main(String [] args) {
     
         Bill b1 = new Bill();
-        b1.setData(1000, 25.50, 2);
+        b1.setData(1000, 52.50, 2);
     
     }
 }
