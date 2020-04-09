@@ -13,9 +13,12 @@ public class Main {
     public static void main(String args []){
         
         Purchase p1 = new Purchase();
-        p1.updateAndDisplay(10);
+        int qty1 = p1.update(5);
+        p1.display(qty1);
         
         Purchase p2 = new Purchase();
-        p2.updateAndDisplay(20);
+        int qty2 = p2.update(15);
+        p2.display(qty2);
+        
     }
 }

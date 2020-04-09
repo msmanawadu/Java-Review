@@ -12,8 +12,13 @@ package purchase;
 public class Purchase {
     static int availableQty = 50;
     
-     void updateAndDisplay(int purchasingQty){
+     int update(int purchasingQty){
         availableQty = availableQty - purchasingQty;
-        System.out.println("Available Quantity = " + availableQty);
+        return availableQty;
     }
+     
+     void display(int updatedAvailQty){
+         System.out.println("Available Quantity = " + updatedAvailQty);
+     }
+     
 }
