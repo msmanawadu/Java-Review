@@ -14,11 +14,13 @@ public class Salary extends OT{
     double salaryAmount;
     
     void findSalary(int sNumber, double OTValue, double bSalary){
-        salaryNumber = sNumber;
-       salaryAmount = OTValue + bSalary;
-       
+       salaryNumber = sNumber;
+       salaryAmount = OTValue + bSalary;   
+    }
+    
+    void display(){
        System.out.println("Salary Number = " + salaryNumber);
-       System.out.println("Salary Amount = " + salaryAmount);   
+       System.out.println("Salary Amount = " + salaryAmount); 
     }
         
 }

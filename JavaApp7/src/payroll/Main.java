@@ -13,12 +13,15 @@ public class Main {
     public static void main(String args []){
         
         double OTAmount;
+        
         Salary s1 = new Salary();
         OTAmount = s1.findOT(2.5, 150.50);
         s1.findSalary(1001, OTAmount, 10000);
+        s1.display();
         
         Salary s2 = new Salary();
         OTAmount = s2.findOT(3.8, 155.89);
         s2.findSalary(1002, OTAmount, 12000);
+        s2.display();
     }
 }
