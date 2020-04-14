@@ -23,7 +23,9 @@ public class Salary extends OT{
     
     void findSalary(double OTValue){
     salaryAmount = OTValue + basicSalary;
+    }
     
+    void display(){
     System.out.println("Salary Number - " + salaryNumber);
     System.out.println("Salary Amount = " + salaryAmount);
     }

@@ -17,9 +17,12 @@ public class Main {
         Salary s1 = new Salary(2.4, 150.78, 1000, 12000);
         OTAmount = s1.findOT();
         s1.findSalary(OTAmount);
+        s1.display();
         
         Salary s2 = new Salary(3.8, 190.63, 1002, 10000);
         OTAmount = s2.findOT();
-        s2.findSalary((int)OTAmount);
+        s2.findSalary(OTAmount);
+        s2.display();
+        
     }
 }
