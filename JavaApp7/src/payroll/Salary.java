@@ -10,17 +10,22 @@ package payroll;
  * @author MaNa
  */
 public class Salary extends OT{
+    
     int salaryNumber;
+    double basicSalary;
     double salaryAmount;
     
-    void findSalary(int sNumber, double OTValue, double bSalary){
-       salaryNumber = sNumber;
-       salaryAmount = OTValue + bSalary;   
+    Salary(double hWorked, double hRate, int sNumber, double bSalary){
+    super(hWorked, hRate); 
+    salaryNumber = sNumber;
+    basicSalary = bSalary;
     }
     
-    void display(){
-       System.out.println("Salary Number = " + salaryNumber);
-       System.out.println("Salary Amount = " + salaryAmount); 
+    void findSalary(double OTValue){
+    salaryAmount = OTValue + basicSalary;
+    
+    System.out.println("Salary Number - " + salaryNumber);
+    System.out.println("Salary Amount = " + salaryAmount);
     }
         
 }

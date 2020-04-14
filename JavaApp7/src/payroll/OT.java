@@ -11,9 +11,18 @@ package payroll;
  */
 public class OT {
     
-    double findOT(double wHours, double hRate){
-        double OTAmt = wHours * hRate;
+    double hoursWorked;
+    double hourRate;
+    
+    OT(double hWorked, double hRate){
+        hoursWorked = hWorked;
+        hourRate = hRate;
+    }
+    
+    double findOT(){
+        double OTAmt = hoursWorked * hourRate;
         return OTAmt;
     }
+    
 }
 
