@@ -11,7 +11,7 @@ package operations;
  */
 public class Math {
     
-    void calculate(int x, int y){
+    final void calculate(int x, int y){
         int z = x * y;
         System.out.println("Multiplication = " + z);
     }
