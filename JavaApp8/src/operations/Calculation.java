@@ -9,9 +9,7 @@ package operations;
  *
  * @author MaNa
  */
-public class Calculation extends Math{
-    
-   
+public final class Calculation extends Math{
     
    /* void calculate(int x, int y){
       int z = x / y;
