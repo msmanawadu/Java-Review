@@ -15,4 +15,5 @@ public class Math {
         int z = x * y;
         System.out.println("Multiplication = " + z);
     }
+    
 }

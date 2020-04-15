@@ -15,8 +15,6 @@ public class Main {
         Calculation c1 = new Calculation();
         c1.calculate(10, 5);
         
-        Calculation c2 = new Calculation();
-        c2.calculate(21, 7);
         
         Math m1 = new Math();
         m1.calculate(5, 3);

@@ -13,7 +13,11 @@ public class Calculation extends Math{
     
     @Override
     void calculate(int x, int y){
-       int z = x / y;
-       System.out.println("Division = " + z);
+      int z = x / y;
+      display(z);
+    }
+    
+    void display(int value){
+        System.out.println("Division = " + value);
     }
 }
