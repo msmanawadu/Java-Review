@@ -16,13 +16,26 @@ public class Values {
         try{
         for(int i = 0; i <= values.length-1; i++){
         
+            display(values[i]);
+        }
+            }
+        
+        catch(ArrayIndexOutOfBoundsException e){
+        System.out.println("Out of bounds");
+        }   
+    }
+    
+    void display(int...values){
+       try{
+        for(int i = 0; i <= values.length-1; i++){
+        
             System.out.println(values[i]);
         }
             }
         
         catch(ArrayIndexOutOfBoundsException e){
         System.out.println("Out of bounds");
-        }
+        }  
     }
 }
 
