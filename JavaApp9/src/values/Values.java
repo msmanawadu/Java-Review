@@ -9,7 +9,20 @@ package values;
  *
  * @author MaNa
  */
-abstract public class Values {
-    
-    abstract void calculate(int x, int y);
+public class Values {
+   
+    void displayValues(int...values){
+        
+        try{
+        for(int i = 0; i <= values.length-1; i++){
+        
+            System.out.println(values[i]);
+        }
+            }
+        
+        catch(ArrayIndexOutOfBoundsException e){
+        System.out.println("Out of bounds");
+        }
+    }
 }
+
