@@ -9,13 +9,21 @@ package vehicle;
  *
  * @author MaNa
  */
+
+import java.util.*;
+
 public class Main {
     public static void main(String args []){
         
-        Vehicle v1 = new Vehicle(500,2.5);
-        v1.findSpeed();
+        Scanner input = new Scanner(System.in);
         
-        Vehicle v2 = new Vehicle(400,5);
-        v2.findSpeed();
+        System.out.println("Enter distance travelled - ");
+        int value1 = input.nextInt();
+        
+        System.out.println("Enter time consumed - ");
+        double value2 = input.nextDouble();
+        
+        Vehicle v1 = new Vehicle(value1, value2);
+        v1.findSpeed();
     }
 }

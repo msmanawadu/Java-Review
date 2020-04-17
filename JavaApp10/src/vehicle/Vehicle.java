@@ -26,7 +26,7 @@ public class Vehicle {
     }
     
     public void displaySpeed(double calcSpeed){
-        System.out.println("Speed = " + speed + " kmph");
+        System.out.println("Speed = " + (int)calcSpeed + " kmph");
     }
     
 }
