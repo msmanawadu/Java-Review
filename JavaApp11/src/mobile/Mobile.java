@@ -10,15 +10,17 @@ package mobile;
  * @author MaNa
  */
 public class Mobile implements Bill{
-
+    
+    private int BillAmount;
+    
     @Override
     public void calculate(int x, int y) {
         
-        int z = x * y;
-        display(z);
+        BillAmount = x * y;
+        display(BillAmount);
     }
     
-    public void display(int BillAmount){
+    public void display(int BAmount){
         System.out.println("Bill Amount = " + BillAmount);
     }
     
