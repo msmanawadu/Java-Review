@@ -11,12 +11,19 @@ package area;
  */
 public class Circle implements Shape{
     
-    public void findArea(int radius){
-       double area = pi * radius * radius;
-       display(area);
+    private final int radius;
+    private double area;
+    
+    public Circle(int r){
+        radius = r;
     }
     
-    public void display(double a){
-        System.out.println("Area = " + a + " units");
+    public void findArea(){
+       area = pi * radius * radius;
+       display();
+    }
+    
+    public void display(){
+        System.out.println("Area = " + area + " units");
     }
 }
