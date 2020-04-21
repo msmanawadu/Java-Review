@@ -9,11 +9,22 @@ package mobilebill;
  *
  * @author MaNa
  */
+
+import java.util.*;
+
 public class Main {
    public static void main(String args []){
        
+       Scanner input = new Scanner(System.in);
+       
+       System.out.println("Enter Unit Price");
+       int v1 = input.nextInt();
+       
+       System.out.println("Enter Units Consumed");
+       int v2 = input.nextInt();
+       
        Mobile m1 = new Mobile();
-       m1.set(2, 100);
+       m1.set(v1, v2);
        m1.calculate();
        m1.display();
    } 

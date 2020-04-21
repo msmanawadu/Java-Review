@@ -28,7 +28,7 @@ public class Mobile implements Getter{
     
     @Override
     public void display(){
-        System.out.println("Bill Amount = " + billAmount);
+        System.out.println("Bill Amount = " + billAmount + " units");
     }
     
 }
