@@ -10,5 +10,7 @@ package mobilebill;
  * @author MaNa
  */
 public interface Getter extends Setter{
+    
+    public void calculate();
     public abstract void display();
 }

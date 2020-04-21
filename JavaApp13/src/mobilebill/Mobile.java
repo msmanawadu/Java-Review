@@ -16,15 +16,19 @@ public class Mobile implements Getter{
     private int billAmount;
     
     @Override
-    public void display() {
-        billAmount = unitPrice * unitsConsumed;
-        System.out.println("Bill Amount = " + billAmount);
+    public void calculate() {
+        billAmount = unitPrice * unitsConsumed; 
     }
 
     @Override
     public void set(int x, int y) {
         unitPrice = x;
         unitsConsumed = y; 
+    }
+    
+    @Override
+    public void display(){
+        System.out.println("Bill Amount = " + billAmount);
     }
     
 }

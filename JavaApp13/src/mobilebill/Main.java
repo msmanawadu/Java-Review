@@ -13,7 +13,8 @@ public class Main {
    public static void main(String args []){
        
        Mobile m1 = new Mobile();
-       m1.set(5, 10);
+       m1.set(2, 100);
+       m1.calculate();
        m1.display();
    } 
 }
