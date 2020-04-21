@@ -9,12 +9,19 @@ package area;
  *
  * @author MaNa
  */
+
+import java.util.*;
+
 public class Main {
    public static void main(String args []){
        
-       Circle c1 = new Circle(10);
+       Scanner input = new Scanner(System.in);
+       
+       System.out.println("Enter a value for Radius");
+       int v1 = input.nextInt();
+       
+       Circle c1 = new Circle(v1);
        c1.findArea();
        
-   
    } 
 }
