@@ -5,7 +5,7 @@
  */
 package main;
 
-import studentinfo.Student;
+import studentinfo.*;
 import java.util.*;
 /**
  *
@@ -21,8 +21,14 @@ public class School {
         
         System.out.println("Enter Student Number");
         int number = input.nextInt();
+        
+        System.out.println("Enter Student Marks");
+        int mark = input.nextInt();
       
         Student s1 = new Student();
         s1.showData(number, name);
+        
+        Result r1 = new Result();
+        r1.getResult(mark);
     }
 }
