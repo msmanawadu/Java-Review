@@ -6,16 +6,23 @@
 package main;
 
 import studentinfo.Student;
-
+import java.util.*;
 /**
  *
  * @author MaNa
  */
 public class School {
     
-    public static void main(String args []){
+    public static void main(String args []){    
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Enter Student Name");
+        String name = input.nextLine();
+        
+        System.out.println("Enter Student Number");
+        int number = input.nextInt();
+      
         Student s1 = new Student();
-        s1.showData(1000, "Siharaa Meddegoda");
-    
+        s1.showData(number, name);
     }
 }
