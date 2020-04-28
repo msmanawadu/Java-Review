@@ -17,19 +17,19 @@ public class Main {
         
         try{
             System.out.println("Enter 1st value");
-            intArray[0] = input.nextInt();
-            System.out.println("Enter 2nd vlaue");
             intArray[1] = input.nextInt();
+            System.out.println("Enter 2nd vlaue");
+            intArray[2] = input.nextInt();
             
             int answer = intArray[0] / intArray[1];
             System.out.println("Answer = " + answer);
-        }
+            }
         catch(ArrayIndexOutOfBoundsException e){
             System.out.println("Sorry, the array is out of bounds");
-        }
+                                                }
         catch(ArithmeticException e){
             System.out.println("oops! Cannot devide by Zero");
-        }
+                                     }
         
        
     }
