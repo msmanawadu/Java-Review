@@ -12,19 +12,19 @@ import java.util.*;
  */
 public class Main {
     public static void main(String args []){
-        
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter 1st value");
-        int v1 = input.nextInt();
-        System.out.println("Enter 2nd value");
-        int v2 = input.nextInt();
-        
-        try{
-            int v3 = v1 / v2;
-            System.out.println("Answer = " + v3);
+        int[] array = new int[3];
+            try{
+                array[0] = 1;
+                array[1] = 2;
+                array[2] = 3;
+                
+                array[3] = 4;
+                
+          System.out.println("There are 3 elements in the array");
         } 
-        catch(ArithmeticException e){
-            System.out.println("Sorry, Cannot devide by Zero");   
+            catch(ArrayIndexOutOfBoundsException e){
+            System.out.println("oops ! the array is out of bounds");
         }
+       
     }
 }
