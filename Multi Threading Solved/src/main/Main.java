@@ -9,10 +9,9 @@ package main;
  *
  * @author MaNa
  */
-public class MySubThread extends Thread{
-    @Override
-    public void run(){
-        
-        
+public class Main {
+    public static void main(String args []){
+        MyThread t1 = new MyThread();
+        t1.start();
     }
 }
