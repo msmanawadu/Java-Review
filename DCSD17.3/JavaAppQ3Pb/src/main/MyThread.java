@@ -18,7 +18,6 @@ public class MyThread extends Thread{
         for(int i = 100; i <= 200; i++){
             if(i%10 == 0) {
                 
-            // System.out.println(i); 
              
              
                 for(int j = 0; j<= intArray.length - 1; j++){
@@ -33,9 +32,9 @@ public class MyThread extends Thread{
                
         }
         
-       for(int j = 0; j<= intArray.length - 1; j++){
-                  System.out.println(intArray[j]);
-                }
+//       for(int j = 0; j<= intArray.length - 1; j++){
+//                  System.out.println(intArray[j]);
+//                }
         
         
         
