@@ -19,7 +19,7 @@ public class Main {
             doMoreStuff();
         }
         catch(ArithmeticException e){
-            System.out.println("Cannot divide by 0");
+            e.printStackTrace();
         }
         
     }
