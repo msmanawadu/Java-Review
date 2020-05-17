@@ -10,7 +10,8 @@ package main;
  * @author MaNa
  */
 public class MyLinkedList {
-    static Node head;
+    static Node head; //head pointer of the list
+    
     //linked list Node. This inner class is made static so that main() can access it.
     static class Node {
         int data;
