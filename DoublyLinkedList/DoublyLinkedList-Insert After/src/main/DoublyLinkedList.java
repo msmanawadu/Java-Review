@@ -67,10 +67,35 @@ public class DoublyLinkedList {
         while(temp != null && temp.data != keyValue){
             temp = temp.next;
         }
-        if(temp != null){
+        if(temp != null && temp.next != null){
             Node nextRef = temp.next;
             temp.next = new Node(toInsert, temp, nextRef);
-            //nextRef.prev = temp.next;
+            nextRef.prev = temp.next;
         }
+        else if(temp != null && temp.next == null){
+            addLast(toInsert);
+        }
+    }
+    
+    //addLast function to create a node and appends it at the end of the list.
+    public static void addLast(int item){
+        //check whether the DLL is empty
+        if(head == null){
+            addFirst(item);
+        }
+        else {
+            Node temp = head;
+            while(temp.next != null){
+                temp = temp.next;
+            }
+            temp.next = new Node(item, temp, null);
+        }
+    }
+    
+    //addFirst function to create a node and prepends it at the beginning of the list.
+    public static void addFirst(int item){
+        Node temp = head;
+        head = new Node(item, null, head);
+        temp.prev = head;
     }
 }
