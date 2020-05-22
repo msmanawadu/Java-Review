@@ -25,6 +25,7 @@ public class Main {
         int lastValue = cl.getLast();
         cl.displayLast(lastValue);
         
-        
+        int firstValue = cl.getFirst();
+        cl.displayFirst(firstValue);
     }
 }
