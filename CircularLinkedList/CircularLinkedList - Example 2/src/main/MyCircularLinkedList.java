@@ -169,4 +169,33 @@ public class MyCircularLinkedList {
         }
     }
     
+    /*insertBefore function - find the node containing "key" data value and insert a new node 
+    before it. There are 2 categories*/
+    
+    public void insertBefore(int keyValue, int toInsert){
+        //check whether the Circularly Linked List is empty.
+        if(head == null){
+            System.out.println("Circularly Linked List is empty");
+        }
+        
+        Node temp = head;
+        Node prev = null;
+        while(temp.data != keyValue){
+            prev = temp;
+            temp = temp.next; 
+        }
+        
+        /*category 1 - check if it is the head node*/
+        if(temp == head){
+            addNodeAtStart(toInsert);
+        }
+        
+        /*category 2 - node to be added is before the tail node, which is same as adding
+        the new node before a middle section node*/
+        else{
+            prev.next = new Node(toInsert, temp);
+        }
+        
+    }
+    
 }
