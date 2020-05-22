@@ -20,7 +20,11 @@ public class Main {
         cl.addNodeAtEnd(5);
         
         cl.print();
-        cl.remove(3);
-        cl.print();
+        //cl.remove(3);
+        //cl.print();
+        int lastValue = cl.getLast();
+        cl.displayLast(lastValue);
+        
+        
     }
 }

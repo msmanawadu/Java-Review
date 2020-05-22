@@ -92,6 +92,19 @@ public class MyCircularLinkedList {
         }
     }
     
+    //getLast function - returns the data value of the last node (tail node)
+
+    public int getLast(){
+        //check whether the CLL is empty
+        if(head == null){
+            throw new RuntimeException("List is empty");            
+        }
+        Node temp = head;
+        while(temp.next != head){
+            temp = temp.next;
+        }
+        return temp.data;
+    }
     
     //print function - traverse and display the data in the CLL
     public void print(){
@@ -107,6 +120,11 @@ public class MyCircularLinkedList {
             } while(temp != head);
         }
         System.out.println();
+    }
+    
+    //displayLast function - to display the last node value
+    public void displayLast(int value){
+        System.out.println("Tail Node - " + value);
     }
     
 }
