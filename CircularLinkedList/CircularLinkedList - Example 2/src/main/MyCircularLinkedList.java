@@ -47,102 +47,6 @@ public class MyCircularLinkedList {
         System.out.println("\nNode " + data + " is added at the end of the list");
     }
     
-    
-    /*remove function - find the node containing the "key" value and delete it.
-    node deletion involves 4 categories*/
-    
-    public void remove(int keyValue){
-        //check whether the Circularly Linked List is empty.
-        if(head == null){
-            System.out.println("Circularly Linked List is empty");
-        }
-        
-        Node temp = head;
-        Node prev = null;
-        
-        while(temp.data != keyValue){
-            prev = temp;
-            temp = temp.next; 
-        }
-        
-        //category 1 - check if it is the only node in the CLL
-        if(temp == head && temp.next == head){
-            head = null;
-        }
-        
-        /*category 2 - else if the CLL has more than one node, check if it is the first node
-        of the list*/
-        else if(temp == head && temp.next != head){
-           prev = head;
-           while(prev.next != head){
-               prev = prev.next;
-           }
-           head = temp.next;
-           prev.next = head;
-        }
-        
-        /*category 3 - else if, check if it is the last node*/
-        else if(temp.next == head){
-            prev.next = head;
-        }
-        
-        /*category 4 - node to be deleted is neither head nor tail,
-        it is a node in middle section */
-        else {
-            prev.next = temp.next;
-        }
-    }
-    
-    //getLast function - returns the data value of the last node (tail node)
-    public int getLast(){
-        //check whether the CLL is empty
-        if(head == null){
-            throw new RuntimeException("List is empty");            
-        }
-        Node temp = head;
-        while(temp.next != head){
-            temp = temp.next;
-        }
-        return temp.data;
-    }
-    
-    //getFirst function - returns the data value of the first node (head node)
-    public int getFirst(){
-        //check whether the CLL is empty
-        if(head == null){
-            throw new RuntimeException("List is empty");
-        }
-        else{
-            return head.data;
-        }
-    }
-    
-    //print function - traverse and display the data in the CLL
-    public void print(){
-        System.out.println("\nCircularly Linked List: ");
-        Node temp = head;
-        if(size <= 0){
-            System.out.println("Circularly Linked List is empty");
-        }
-        else {
-            do{
-                System.out.println(" " + temp.data);
-                temp = temp.next;
-            } while(temp != head);
-        }
-        System.out.println();
-    }
-    
-    //displayLast function - to display the last node value
-    public void displayLast(int value){
-        System.out.println("Tail Node - " + value);
-    }
-    
-    //displayFirst function - to display the first node value
-    public void displayFirst(int value){
-        System.out.println("Head Node - " + value);
-    }
-    
     /*insertAfter function - find the node containing "key" data value and insert a new node 
     after it. There are 2 categories*/
     
@@ -198,4 +102,98 @@ public class MyCircularLinkedList {
         
     }
     
+    //getFirst function - returns the data value of the first node (head node)
+    public int getFirst(){
+        //check whether the CLL is empty
+        if(head == null){
+            throw new RuntimeException("List is empty");
+        }
+        else{
+            return head.data;
+        }
+    }
+    
+    //getLast function - returns the data value of the last node (tail node)
+    public int getLast(){
+        //check whether the CLL is empty
+        if(head == null){
+            throw new RuntimeException("List is empty");            
+        }
+        Node temp = head;
+        while(temp.next != head){
+            temp = temp.next;
+        }
+        return temp.data;
+    }
+    
+    /*remove function - find the node containing the "key" value and delete it.
+    node deletion involves 4 categories*/
+    
+    public void remove(int keyValue){
+        //check whether the Circularly Linked List is empty.
+        if(head == null){
+            System.out.println("Circularly Linked List is empty");
+        }
+        
+        Node temp = head;
+        Node prev = null;
+        
+        while(temp.data != keyValue){
+            prev = temp;
+            temp = temp.next; 
+        }
+        
+        //category 1 - check if it is the only node in the CLL
+        if(temp == head && temp.next == head){
+            head = null;
+        }
+        
+        /*category 2 - else if the CLL has more than one node, check if it is the first node
+        of the list*/
+        else if(temp == head && temp.next != head){
+           prev = head;
+           while(prev.next != head){
+               prev = prev.next;
+           }
+           head = temp.next;
+           prev.next = head;
+        }
+        
+        /*category 3 - else if, check if it is the last node*/
+        else if(temp.next == head){
+            prev.next = head;
+        }
+        
+        /*category 4 - node to be deleted is neither head nor tail,
+        it is a node in middle section */
+        else {
+            prev.next = temp.next;
+        }
+    }
+    
+    //print function - traverse and display the data in the CLL
+    public void print(){
+        System.out.println("\nCircularly Linked List: ");
+        Node temp = head;
+        if(size <= 0){
+            System.out.println("Circularly Linked List is empty");
+        }
+        else {
+            do{
+                System.out.println(" " + temp.data);
+                temp = temp.next;
+            } while(temp != head);
+        }
+        System.out.println();
+    }
+    
+    //displayFirst function - to display the first node value
+    public void displayFirst(int value){
+        System.out.println("Head Node - " + value);
+    }
+    
+    //displayLast function - to display the last node value
+    public void displayLast(int value){
+        System.out.println("Tail Node - " + value);
+    } 
 }
