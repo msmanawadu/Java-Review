@@ -22,10 +22,13 @@ public class Main {
         cl.print();
         //cl.remove(3);
         //cl.print();
-        int lastValue = cl.getLast();
-        cl.displayLast(lastValue);
+        //int lastValue = cl.getLast();
+        //cl.displayLast(lastValue);
         
-        int firstValue = cl.getFirst();
-        cl.displayFirst(firstValue);
+        //int firstValue = cl.getFirst();
+        //cl.displayFirst(firstValue);
+        
+        cl.insertAfter(1, 10);
+        cl.print();
     }
 }

@@ -14,21 +14,6 @@ public class MyCircularLinkedList {
     static Node head = null;
     static Node tail = null;
     
-    //addNodeAtEnd function - add the node to the end of the CLL (as the tail node)
-    public void addNodeAtEnd(int data){
-        if(size == 0){
-            addNodeAtStart(data);
-        }
-        else {
-            Node n = new Node(data);
-            tail.next = n;
-            tail = n;
-            tail.next = head;
-            size++;
-        }
-        System.out.println("\nNode " + data + " is added at the end of the list");
-    }
-    
     //addNodeAtStart function - add the node to the start of the CLL (as the head node)
     public void addNodeAtStart(int data){
         System.out.println("Adding node " + data + " as head");
@@ -46,6 +31,22 @@ public class MyCircularLinkedList {
         }
         size++;
     }
+    
+    //addNodeAtEnd function - add the node to the end of the CLL (as the tail node)
+    public void addNodeAtEnd(int data){
+        if(size == 0){
+            addNodeAtStart(data);
+        }
+        else {
+            Node n = new Node(data);
+            tail.next = n;
+            tail = n;
+            tail.next = head;
+            size++;
+        }
+        System.out.println("\nNode " + data + " is added at the end of the list");
+    }
+    
     
     /*remove function - find the node containing the "key" value and delete it.
     node deletion involves 4 categories*/
@@ -140,6 +141,32 @@ public class MyCircularLinkedList {
     //displayFirst function - to display the first node value
     public void displayFirst(int value){
         System.out.println("Head Node - " + value);
+    }
+    
+    /*insertAfter function - find the node containing "key" data value and insert a new node 
+    after it. There are 2 categories*/
+    
+    public void insertAfter(int keyValue, int toInsert){
+        //check whether the Circularly Linked List is empty.
+        if(head == null){
+            System.out.println("Circularly Linked List is empty");
+        }
+        
+        Node temp = head;
+        while(temp.data != keyValue){
+            temp = temp.next; 
+        }
+        
+        /*category 1 - check if it is the last node*/
+        if(temp.next == head){
+            addNodeAtEnd(toInsert);
+        }
+        
+        /*category 2 - node to be added is after the head node, which is same as adding
+        the new node after a middle section node*/
+        else {
+            temp.next = new Node(toInsert, temp.next);
+        }
     }
     
 }
